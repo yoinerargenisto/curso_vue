@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 02</title>
+</head>
+<body>
+<!---APP de Vue---->
+    <div id="app_frutas">
+        <h1>Practica 02</h1>
+        <h2>Ciclo For en Vue</h2>
+        <hr>
+        <h2>Frutas</h2>
+        <ul>
+            <li v-for="fruta of frutas">{{fruta}}</li>
+        </ul>
+        <hr>
+        <h2>Vegetalles</h2>
+        <ul>
+            <li v-for="vegetal of vegetales">{{vegetal}}</li>
+        </ul>
+        <hr>
+        <h2>Personas</h2>
+        <table border='2'>
+            <tr>
+                <td>ID</td>
+                <td>NOMBRE</td>
+            </tr>
+            <tr v-for="usuario of usuarios">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nombre}}</td>
+            </tr>
+        </table>
+    </div>    
+<!---End APP de Vue---->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>

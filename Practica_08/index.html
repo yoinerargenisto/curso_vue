@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 08</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+<!---APP de Vue---->
+    <div id="app_computadas" class=" ">
+        <h1>Practica 08</h1>
+        <h2>propiedades computadas segundo ejemplo</h2>
+        <hr>
+        <div class="col-6 p-3">
+            <div v-if="contador == 0" class=" col-2 bg-danger text-white p-2 rounded">Esta en cero</div>
+             <br>
+            <div v-if="contador > 0" class="progress" >
+                <div :class="color_barra" class="progress-bar" role="progressbar" :style="{'width': contador+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{contador}}%</div>
+            </div>
+        
+            <h3>{{contador}}</h3>
+            <button class="btn btn-primary" @click="contador_suma">+</button>
+            <button class="btn btn-danger"  @click="contador_resta">&nbsp-&nbsp</button>
+        </div>
+    </div>    
+<!---End APP de Vue---->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 05</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!---APP de Vue---->
+    <div id="app_input_texto">
+        <h1>Practica 05</h1>
+        <h2>imput metodos onkey</h2>
+        <h2>Texto</h2>
+        <table border='2'>
+            <tr>
+                <td>Articulo:</td>
+                <td><input type="text" v-model="articulo_nuevo" @keyup.enter="key_agregar_articulo"></td>
+            </tr>
+        </table>
+        <hr>
+        Listar Articulo
+        <ul>
+            <li v-for="articulo of articulos">{{articulo.id}} {{articulo.nombre}}</li>
+
+        </ul>
+    </div>    
+<!---End APP de Vue---->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>

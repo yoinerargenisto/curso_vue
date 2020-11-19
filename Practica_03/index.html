@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!---APP de Vue---->
+    <div id="app_productos">
+        <h1>Practica 03</h1>
+        <h2>Condiciones if  else if y else</h2>
+
+        <h2>Productos</h2>
+        <table border='2'>
+            <tr>
+                <td>PRODUCTOS</td>
+                <td>PRECIO</td>
+                <td>CANTIDAD</td>
+                <td></td>
+            </tr>
+            <tr v-for="producto of productos">
+                <td>{{producto.producto}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.cantidad}}</td>
+                <td v-if="producto.cantidad < 6 && producto.cantidad != 0 "class ="warning">Queda poca existencia de este articulo</td>
+                <td v-if="producto.cantidad == 0"class ="danger">No queda existencia de este articulo</td>
+            </tr>
+        </table>
+    </div>    
+<!---End APP de Vue---->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>
